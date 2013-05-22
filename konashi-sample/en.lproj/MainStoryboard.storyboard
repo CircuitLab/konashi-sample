@@ -110,6 +110,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="input io4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32D-4H-5rb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,10 +127,9 @@
                             <constraint firstItem="XLb-on-dnh" firstAttribute="centerX" secondItem="G1J-3A-jv5" secondAttribute="centerX" type="default" id="GTp-un-HYf"/>
                             <constraint firstItem="7Vr-cx-erh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="137" id="IP2-EA-2rY"/>
                             <constraint firstItem="XLb-on-dnh" firstAttribute="top" secondItem="rK1-OU-FHR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="L4N-Et-wFb"/>
-                            <constraint firstItem="94N-bN-W96" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="27" id="NPF-Q2-BDC"/>
+                            <constraint firstItem="32D-4H-5rb" firstAttribute="centerX" secondItem="94N-bN-W96" secondAttribute="centerX" type="default" id="M20-ap-21p"/>
                             <constraint firstAttribute="trailing" secondItem="Xu2-Id-Xt1" secondAttribute="trailing" constant="26" id="P9n-J5-uHo"/>
                             <constraint firstItem="rK1-OU-FHR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="254" id="RZZ-Zq-T7B"/>
-                            <constraint firstItem="YN8-DL-AbM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="22" id="RmJ-2T-CsT"/>
                             <constraint firstItem="rK1-OU-FHR" firstAttribute="leading" secondItem="94N-bN-W96" secondAttribute="leading" type="default" id="SID-gB-cNU"/>
                             <constraint firstItem="XLb-on-dnh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Sc8-5J-lCO"/>
                             <constraint firstAttribute="bottom" secondItem="7Vr-cx-erh" secondAttribute="bottom" constant="171" id="V3J-RC-ddJ"/>
@@ -133,10 +137,13 @@
                             <constraint firstAttribute="bottom" secondItem="6MX-ru-KMR" secondAttribute="bottom" constant="112" id="cRg-pN-IXu"/>
                             <constraint firstItem="G1J-3A-jv5" firstAttribute="top" secondItem="94N-bN-W96" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hEF-y8-imo"/>
                             <constraint firstItem="G1J-3A-jv5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l2r-Hk-4W6"/>
+                            <constraint firstItem="32D-4H-5rb" firstAttribute="leading" secondItem="YN8-DL-AbM" secondAttribute="leading" type="default" id="lkJ-On-dVX"/>
                             <constraint firstItem="S7d-Yg-R6r" firstAttribute="top" secondItem="3" secondAttribute="top" constant="112" id="nZD-Av-Xwp"/>
                             <constraint firstItem="rK1-OU-FHR" firstAttribute="baseline" secondItem="Xu2-Id-Xt1" secondAttribute="baseline" type="default" id="t2W-WA-aGf"/>
                             <constraint firstItem="YN8-DL-AbM" firstAttribute="top" secondItem="6MX-ru-KMR" secondAttribute="top" type="default" id="v8S-5U-0wk"/>
+                            <constraint firstItem="32D-4H-5rb" firstAttribute="bottom" secondItem="SIe-MK-qV4" secondAttribute="bottom" type="default" id="wcu-sK-A6r"/>
                             <constraint firstItem="SIe-MK-qV4" firstAttribute="centerX" secondItem="G1J-3A-jv5" secondAttribute="centerX" type="default" id="xDI-Hr-NDh"/>
+                            <constraint firstItem="32D-4H-5rb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="22" id="xYa-am-Ztl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -161,6 +168,31 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="aioOutChanged:"/>
+                <relationship kind="action" name="find:"/>
+                <relationship kind="action" name="ioFiveOff:"/>
+                <relationship kind="action" name="ioFiveOn:"/>
+                <relationship kind="action" name="pwmChanged:"/>
+                <relationship kind="action" name="sendUart:"/>
+                <relationship kind="outlet" name="aioLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="aioSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="ioFiveOffBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ioFiveOnBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pwmLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pwmSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="recieveSelialLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sendUartBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="uartTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
