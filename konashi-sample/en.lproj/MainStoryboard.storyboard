@@ -25,46 +25,48 @@
                                     <action selector="find:" destination="2" eventType="touchUpInside" id="SFf-0R-xbn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-Yg-R6r">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="デジタルI/O 5 off">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ioFiveOff:" destination="2" eventType="touchUpInside" id="NAG-ug-hep"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHJ-9U-vNz">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="デジタルI/O 5 on">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ioFiveOn:" destination="2" eventType="touchUpInside" id="scl-8k-2wT"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="input io4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32D-4H-5rb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="input io3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32D-4H-5rb">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T4E-05-oEm">
+                                <connections>
+                                    <action selector="io4Change:" destination="2" eventType="valueChanged" id="Pou-9E-ad7"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IO4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-lx-pQb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="95F-su-Ze4"/>
+                                    <constraint firstAttribute="width" constant="90" id="wfW-4u-5V3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IO5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-nt-g9N">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a21-vx-lLg">
+                                <connections>
+                                    <action selector="io5Change:" destination="2" eventType="valueChanged" id="6p5-OU-LdP"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="cHJ-9U-vNz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Fy-3x-V4D"/>
-                            <constraint firstItem="cHJ-9U-vNz" firstAttribute="baseline" secondItem="S7d-Yg-R6r" secondAttribute="baseline" type="default" id="Ezp-Xv-8WQ"/>
-                            <constraint firstItem="S7d-Yg-R6r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="19" id="Fw3-Aa-R5H"/>
+                            <constraint firstItem="RZM-nt-g9N" firstAttribute="leading" secondItem="KuA-lx-pQb" secondAttribute="leading" type="default" id="3rX-7d-uTN"/>
+                            <constraint firstItem="KuA-lx-pQb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="86" id="Aec-v9-u0l"/>
+                            <constraint firstItem="T4E-05-oEm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="158" id="O1v-7M-z86"/>
+                            <constraint firstItem="a21-vx-lLg" firstAttribute="centerY" secondItem="RZM-nt-g9N" secondAttribute="centerY" type="default" id="P7G-uL-M4N"/>
+                            <constraint firstItem="a21-vx-lLg" firstAttribute="leading" secondItem="T4E-05-oEm" secondAttribute="leading" type="default" id="UYm-WV-rfo"/>
                             <constraint firstItem="SIe-MK-qV4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="40" id="Z8e-u4-ZN0"/>
-                            <constraint firstItem="S7d-Yg-R6r" firstAttribute="top" secondItem="3" secondAttribute="top" constant="112" id="nZD-Av-Xwp"/>
+                            <constraint firstItem="KuA-lx-pQb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="120" id="g91-lV-wYt"/>
+                            <constraint firstItem="T4E-05-oEm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="hoK-Sb-hMC"/>
                             <constraint firstItem="SIe-MK-qV4" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="t9s-Cn-tmd"/>
+                            <constraint firstItem="a21-vx-lLg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="174" id="uNG-ik-aTj"/>
                             <constraint firstItem="32D-4H-5rb" firstAttribute="bottom" secondItem="SIe-MK-qV4" secondAttribute="bottom" type="default" id="wcu-sK-A6r"/>
                             <constraint firstItem="32D-4H-5rb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="22" id="xYa-am-Ztl"/>
                         </constraints>
@@ -72,6 +74,8 @@
                     <connections>
                         <outlet property="aioLabel" destination="Xu2-Id-Xt1" id="9hP-Dy-pH3"/>
                         <outlet property="aioSlider" destination="XLb-on-dnh" id="IgP-Hp-Mgs"/>
+                        <outlet property="io4Switch" destination="T4E-05-oEm" id="2eR-J4-Pnp"/>
+                        <outlet property="io5Switch" destination="a21-vx-lLg" id="ckv-tu-l42"/>
                         <outlet property="ioFiveOffBtn" destination="S7d-Yg-R6r" id="fDo-ai-qAl"/>
                         <outlet property="ioFiveOnBtn" destination="cHJ-9U-vNz" id="1XS-Ox-VmH"/>
                         <outlet property="pwmLabel" destination="94N-bN-W96" id="Qdo-pq-lkp"/>
@@ -106,6 +110,34 @@
                     </state>
                     <connections>
                         <action selector="sendUart:" destination="2" eventType="touchUpInside" id="coh-C6-pco"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S7d-Yg-R6r">
+                    <rect key="frame" x="0.0" y="0.0" width="93" height="44"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="I/O 5 off">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ioFiveOff:" destination="2" eventType="touchUpInside" id="NAG-ug-hep"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cHJ-9U-vNz">
+                    <rect key="frame" x="0.0" y="0.0" width="98" height="44"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="I/O 5 on">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ioFiveOn:" destination="2" eventType="touchUpInside" id="scl-8k-2wT"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Selial receve" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YN8-DL-AbM">
@@ -158,12 +190,16 @@
             <relationships>
                 <relationship kind="action" name="aioOutChanged:"/>
                 <relationship kind="action" name="find:"/>
+                <relationship kind="action" name="io4Change:"/>
+                <relationship kind="action" name="io5Change:"/>
                 <relationship kind="action" name="ioFiveOff:"/>
                 <relationship kind="action" name="ioFiveOn:"/>
                 <relationship kind="action" name="pwmChanged:"/>
                 <relationship kind="action" name="sendUart:"/>
                 <relationship kind="outlet" name="aioLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="aioSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="io4Switch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="io5Switch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="ioFiveOffBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="ioFiveOnBtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="pwmLabel" candidateClass="UILabel"/>

@@ -19,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendUartBtn;
 
 @property (weak, nonatomic) IBOutlet UILabel *recieveSelialLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *io4Switch;
+
+@property (weak, nonatomic) IBOutlet UISwitch *io5Switch;
+
 
 - (IBAction)find:(id)sender;
 - (IBAction)ioFiveOff:(id)sender;
@@ -26,5 +30,9 @@
 - (IBAction)pwmChanged:(id)sender;
 - (IBAction)aioOutChanged:(id)sender;
 - (IBAction)sendUart:(id)sender;
+- (IBAction)io4Change:(id)sender;
+- (IBAction)io5Change:(id)sender;
+
+
 
 @end

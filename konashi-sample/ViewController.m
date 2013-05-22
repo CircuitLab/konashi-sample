@@ -74,19 +74,41 @@
     [Konashi uartWrite:*cString];
 }
 
+- (IBAction)io4Change:(id)sender {
+    BOOL flag = _io4Switch.on;
+    if (flag) {
+        [Konashi pinMode:PIO4 mode:OUTPUT];
+        [Konashi digitalWrite:PIO4 value:HIGH];
+    }else{
+        [Konashi pinMode:PIO4 mode:OUTPUT];
+        [Konashi digitalWrite:PIO4 value:LOW];
+    }
+}
+
+- (IBAction)io5Change:(id)sender {
+    BOOL flag = _io5Switch.on;
+    if (flag) {
+        [Konashi pinMode:PIO5 mode:OUTPUT];
+        [Konashi digitalWrite:PIO5 value:HIGH];
+    }else{
+        [Konashi pinMode:PIO5 mode:OUTPUT];
+        [Konashi digitalWrite:PIO5 value:LOW];
+    }
+}
+
 - (void)ready
 {
     [Konashi pinMode:LED2 mode:OUTPUT];
     [Konashi digitalWrite:LED2 value:HIGH];
-    [Konashi pinMode:PIO4 mode:INPUT];
+    [Konashi pinMode:PIO3 mode:INPUT];
     
     [Konashi uartBaudrate:KONASHI_UART_RATE_9K6];
     [Konashi uartMode:KONASHI_UART_ENABLE];
     
 }
 - (void)input{
-    [Konashi pinMode:PIO4 mode:INPUT];
-    NSLog(@"[Konashi digitalRead:PIO4]:%d", [Konashi digitalRead:PIO4]);
+    [Konashi pinMode:PIO3 mode:INPUT];
+    NSLog(@"[Konashi digitalRead:PIO3]:%d", [Konashi digitalRead:PIO3]);
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     [self sendMail];
 }
