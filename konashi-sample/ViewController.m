@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+- (NSString *) sendMail;
 @end
 
 @implementation ViewController
@@ -87,10 +88,30 @@
     [Konashi pinMode:PIO4 mode:INPUT];
     NSLog(@"[Konashi digitalRead:PIO4]:%d", [Konashi digitalRead:PIO4]);
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    [self sendMail];
 }
 
 - (void)receiveUart {
     NSLog(@"UartRx :%c", [Konashi uartRead]);
     _recieveSelialLabel.text =  [NSString stringWithFormat:@"%c", [Konashi uartRead]];
 }
+
+- (NSString *) sendMail{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:[NSURL URLWithString:@"http://ec2-46-51-238-190.ap-northeast-1.compute.amazonaws.com:3000/mail"]];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200){
+//        NSLog(@"Error getting %@, HTTP status code %i", url, [responseCode statusCode]);
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
+}
+
 @end
