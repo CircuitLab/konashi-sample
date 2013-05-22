@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420D743C1727F3A60078CA47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420D743B1727F3A60078CA47 /* AudioToolbox.framework */; };
 		42E760AD170EC6AD0036D27A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E760AC170EC6AD0036D27A /* UIKit.framework */; };
 		42E760AF170EC6AD0036D27A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E760AE170EC6AD0036D27A /* Foundation.framework */; };
 		42E760B1170EC6AD0036D27A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E760B0170EC6AD0036D27A /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 		42E760D3170EC6AD0036D27A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E760AE170EC6AD0036D27A /* Foundation.framework */; };
 		42E760DB170EC6AD0036D27A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42E760D9170EC6AD0036D27A /* InfoPlist.strings */; };
 		42E760DE170EC6AD0036D27A /* konashi_sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E760DD170EC6AD0036D27A /* konashi_sampleTests.m */; };
+		42E760EB171266760036D27A /* Konashi.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E760E9171266760036D27A /* Konashi.m */; };
+		42E760ED171266D90036D27A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E760EC171266D90036D27A /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420D743B1727F3A60078CA47 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		42E760A9170EC6AD0036D27A /* konashi-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "konashi-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E760AC170EC6AD0036D27A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E760AE170EC6AD0036D27A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +62,10 @@
 		42E760DA170EC6AD0036D27A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42E760DC170EC6AD0036D27A /* konashi_sampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = konashi_sampleTests.h; sourceTree = "<group>"; };
 		42E760DD170EC6AD0036D27A /* konashi_sampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = konashi_sampleTests.m; sourceTree = "<group>"; };
+		42E760E8171266760036D27A /* Konashi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Konashi.h; sourceTree = "<group>"; };
+		42E760E9171266760036D27A /* Konashi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Konashi.m; sourceTree = "<group>"; };
+		42E760EA171266760036D27A /* KonashiDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KonashiDb.h; sourceTree = "<group>"; };
+		42E760EC171266D90036D27A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420D743C1727F3A60078CA47 /* AudioToolbox.framework in Frameworks */,
+				42E760ED171266D90036D27A /* CoreBluetooth.framework in Frameworks */,
 				42E760AD170EC6AD0036D27A /* UIKit.framework in Frameworks */,
 				42E760AF170EC6AD0036D27A /* Foundation.framework in Frameworks */,
 				42E760B1170EC6AD0036D27A /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +97,7 @@
 		42E760A0170EC6AC0036D27A = {
 			isa = PBXGroup;
 			children = (
+				420D743B1727F3A60078CA47 /* AudioToolbox.framework */,
 				42E760B2170EC6AD0036D27A /* konashi-sample */,
 				42E760D6170EC6AD0036D27A /* konashi-sampleTests */,
 				42E760AB170EC6AD0036D27A /* Frameworks */,
@@ -106,6 +117,7 @@
 		42E760AB170EC6AD0036D27A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42E760EC171266D90036D27A /* CoreBluetooth.framework */,
 				42E760AC170EC6AD0036D27A /* UIKit.framework */,
 				42E760AE170EC6AD0036D27A /* Foundation.framework */,
 				42E760B0170EC6AD0036D27A /* CoreGraphics.framework */,
@@ -117,6 +129,7 @@
 		42E760B2170EC6AD0036D27A /* konashi-sample */ = {
 			isa = PBXGroup;
 			children = (
+				42E760E7171266760036D27A /* Konashi */,
 				42E760BB170EC6AD0036D27A /* AppDelegate.h */,
 				42E760BC170EC6AD0036D27A /* AppDelegate.m */,
 				42E760C4170EC6AD0036D27A /* MainStoryboard.storyboard */,
@@ -158,6 +171,16 @@
 				42E760D9170EC6AD0036D27A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42E760E7171266760036D27A /* Konashi */ = {
+			isa = PBXGroup;
+			children = (
+				42E760E8171266760036D27A /* Konashi.h */,
+				42E760E9171266760036D27A /* Konashi.m */,
+				42E760EA171266760036D27A /* KonashiDb.h */,
+			);
+			path = Konashi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +296,7 @@
 				42E760B9170EC6AD0036D27A /* main.m in Sources */,
 				42E760BD170EC6AD0036D27A /* AppDelegate.m in Sources */,
 				42E760C9170EC6AD0036D27A /* ViewController.m in Sources */,
+				42E760EB171266760036D27A /* Konashi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +477,7 @@
 				42E760E3170EC6AD0036D27A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E760E4170EC6AD0036D27A /* Build configuration list for PBXNativeTarget "konashi-sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +486,7 @@
 				42E760E6170EC6AD0036D27A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
